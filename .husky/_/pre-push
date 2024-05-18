@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+echo "running test before push"
+npm test
+
+. "${0%/*}/h"
