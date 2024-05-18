@@ -1,9 +1,12 @@
 module.exports = {
-  stories: ['../src/**/*.stories.@(ts|tsx|js|jsx|mdx)'],
+  stories: ['../src/**/*.@(mdx|stories.@(ts|tsx|js|jsx))'],
+
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    '@chromatic-com/storybook'
   ],
+
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
@@ -19,4 +22,15 @@ module.exports = {
     config.resolve.extensions.push('.ts', '.tsx');
     return config;
   },
+
+  framework: {
+    name: '@storybook/react-vite',
+    options: {}
+  },
+
+  docs: {},
+
+  typescript: {
+    reactDocgen: 'react-docgen-typescript'
+  }
 };

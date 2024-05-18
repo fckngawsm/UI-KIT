@@ -1,22 +1,15 @@
-// src/Button.tsx
-import React from 'react';
-import styled from 'styled-components';
+import React, { ButtonHTMLAttributes } from "react";
+import { StyledButton } from "./Button.styled";
+import { VARIANT } from "./Button.types";
 
-export interface ButtonProps {
-  primary?: boolean;
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: VARIANT;
+  textIsUpper?: boolean;
   children: React.ReactNode;
 }
 
-const StyledButton = styled.button<ButtonProps>`
-  background: ${props => (props.primary ? 'blue' : 'gray')};
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-`;
-
-export const Button: React.FC<ButtonProps> = ({ primary = false, children }) => (
-  <StyledButton primary={primary}>{children}</StyledButton>
+export const Button = ({ variant, children, textIsUpper }: ButtonProps) => (
+  <StyledButton textIsUpper={textIsUpper} variant={variant}>
+    {children}
+  </StyledButton>
 );
-
