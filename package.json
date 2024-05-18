@@ -3,17 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint --fix",
-    "*.{json,css,scss,md}": "prettier --write"
-  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
     "test": "jest",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",    
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -45,7 +42,7 @@
     "@typescript-eslint/eslint-plugin": "^7.9.0",
     "@typescript-eslint/parser": "^7.9.0",
     "@vitejs/plugin-react": "^4.2.1",
-    "eslint": "^9.2.0",
+    "eslint": "^9.3.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-import": "^2.29.1",
