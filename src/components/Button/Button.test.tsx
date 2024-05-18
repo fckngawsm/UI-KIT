@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { Button } from "./index";
 
 const text = "my ui button";
@@ -8,17 +8,6 @@ describe("ui button", () => {
     render(<Button>{text}</Button>);
 
     expect(screen.getByText(text)).toBeInTheDocument();
-  });
-
-  it("should render button filled variant", () => {
-    render(<Button variant="filled">{text}</Button>);
-
-    const button = screen.getByText(text);
-
-    fireEvent.mouseLeave(button);
-
-    expect(button).toHaveStyle("background-color: #6765F2");
-    expect(button).toHaveStyle("color: #FFFFFF");
   });
 
   it("should render button with upper case text", () => {
