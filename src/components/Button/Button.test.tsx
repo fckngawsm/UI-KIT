@@ -7,7 +7,7 @@ describe("ui button", () => {
   it("should render button with children text", () => {
     render(<Button>{text}</Button>);
 
-    expect(screen.getByText(text)).not.toBeInTheDocument();
+    expect(screen.getByText(text)).toBeInTheDocument();
   });
 
   it("should render button critical variant", () => {
