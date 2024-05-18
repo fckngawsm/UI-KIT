@@ -25,4 +25,7 @@ describe("ui button", () => {
 
     expect(button).not.toHaveStyle("text-transform: uppercase");
   });
+
+  it.todo("Цвет при клике");
+  it.todo("Иконки");
 });
