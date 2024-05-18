@@ -15,7 +15,7 @@ describe("ui button", () => {
 
     const button = screen.getByText(text);
 
-    fireEvent.mouseEnter(button);
+    fireEvent.mouseLeave(button);
 
     expect(button).toHaveStyle("background-color: #6765F2");
     expect(button).toHaveStyle("color: #FFFFFF");
