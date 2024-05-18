@@ -1,1 +1,7 @@
-export type VARIANT = "outlined" | "shaded";
+export type VARIANT =
+  | "outlined"
+  | "elevated"
+  | "filled"
+  | "tonal"
+  | "ghost"
+  | "critical";
