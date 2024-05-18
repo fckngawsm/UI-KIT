@@ -3,7 +3,7 @@ import { COLOR } from "@/constants/color";
 import { TEXT_COLOR } from "@/constants/text-color";
 import { darkenColor } from "@/utlis/darkenColor";
 import styled from "styled-components";
-import { BUTTON_PADDING } from "../Button.constants";
+import { BUTTON_PADDING } from "./Button.constants";
 import { ButtonProps } from "./index";
 
 export const StyledButton = styled.button<ButtonProps>`
