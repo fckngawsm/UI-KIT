@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { Button } from "./index";
 
 const text = "my ui button";
@@ -10,10 +10,12 @@ describe("ui button", () => {
     expect(screen.getByText(text)).toBeInTheDocument();
   });
 
-  it("should render button critical variant", () => {
+  it("should render button filled variant", () => {
     render(<Button variant="filled">{text}</Button>);
 
     const button = screen.getByText(text);
+
+    fireEvent.mouseEnter(button);
 
     expect(button).toHaveStyle("background-color: #6765F2");
     expect(button).toHaveStyle("color: #FFFFFF");

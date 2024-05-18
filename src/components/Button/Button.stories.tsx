@@ -14,3 +14,11 @@ ExampleButton.args = {
   variant: "elevated",
   children: "My button",
 };
+
+export const ExampleDisabledButton = Template.bind({});
+
+ExampleDisabledButton.args = {
+  disabled: true,
+  variant: "elevated",
+  children: "disabled button",
+};
