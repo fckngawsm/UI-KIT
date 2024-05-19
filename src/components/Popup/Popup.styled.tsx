@@ -1,11 +1,11 @@
 import { SIZE } from "@/constants/size";
 import { XCircle } from "@phosphor-icons/react";
 import styled from "styled-components";
-import { PopupProps } from ".";
 import { POPUP_WIDTH } from "./Popup.constants";
 
-interface LocalPopupProps extends PopupProps {
+interface LocalPopupProps {
   size?: SIZE;
+  isOpen: boolean;
 }
 
 export const PopupWrapper = styled.div<LocalPopupProps>`
