@@ -1,0 +1,16 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Запускаем commitlint и проверяем код выхода
+npx --no-install commitlint --edit "$1" || {
+  echo
+  echo "Коммит отклонен: сообщение коммита не соответствует установленным правилам."
+  echo "Пожалуйста, используйте следующий формат:"
+  echo "<тип>(<область>): <краткое описание>"
+  echo
+  echo "Примеры:"
+  echo "  feat(ui): created new button component"
+  echo "  fix(api): resolve error with auth"
+  echo
+  exit 1
+}
