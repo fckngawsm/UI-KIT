@@ -1,11 +1,11 @@
-import { PADDING } from "@/constants/padding";
+import { SIZE } from "@/constants/size";
 import React, { ButtonHTMLAttributes, useState } from "react";
 import { StyledButton } from "./Button.styled";
 import { VARIANT } from "./Button.types";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: VARIANT;
-  size?: PADDING;
+  size?: SIZE;
   $textIsUpper?: boolean;
   isDisabled?: boolean;
   $fullWidth?: boolean;

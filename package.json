@@ -16,6 +16,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.5",
     "@testing-library/react": "^15.0.7",
     "cliui": "6",
     "jest-styled-components": "^7.2.0",
