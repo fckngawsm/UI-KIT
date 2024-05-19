@@ -8,6 +8,11 @@
       "pre-commit": "echo ”[Husky] pre-commit”"
     }
   },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "prettier --write"
+    ]
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
