@@ -1,0 +1,10 @@
+/* TODO: вынести в отдельный файл */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.main {
+    text-rendering: optimizeLegibility;
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    width: 100%;
+}

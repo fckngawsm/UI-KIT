@@ -6,30 +6,32 @@ import { VARIANT } from "./Button.types";
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: VARIANT;
   size?: PADDING;
-  textIsUpper?: boolean;
+  $textIsUpper?: boolean;
   isDisabled?: boolean;
-  isHover?: boolean;
-  isActive?: boolean;
+  $fullWidth?: boolean;
+  // isSubmiting?: boolean; // todo
   children: React.ReactNode;
 }
 
 export const Button = ({
-  variant = "filled",
   children,
-  textIsUpper,
+  $textIsUpper,
   isDisabled,
+  variant = "filled",
+  $fullWidth = false,
   size = "s",
 }: ButtonProps) => {
   const [isHover, setIsHover] = useState(false);
   const [buttonIsActive, setButtonIsActive] = useState(false);
   return (
     <StyledButton
-      textIsUpper={textIsUpper}
       variant={variant}
       isDisabled={isDisabled}
       size={size}
-      isHover={isHover}
-      isActive={buttonIsActive}
+      $isHover={isHover}
+      $fullWidth={$fullWidth}
+      $isActive={buttonIsActive}
+      $textIsUpper={$textIsUpper}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
       onMouseDown={() => setButtonIsActive(true)}
