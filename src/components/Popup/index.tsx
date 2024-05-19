@@ -1,5 +1,5 @@
 import { SIZE } from "@/constants/size";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { PopupButton, PopupContent, PopupWrapper } from "./Popup.styled";
 
 export interface PopupProps {
@@ -10,6 +10,19 @@ export interface PopupProps {
 }
 
 export const Popup = ({ children, isOpen, size, onClosing }: PopupProps) => {
+  const [open, setOpen] = useState(isOpen);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const timerId = setTimeout(() => {
+      setOpen(false);
+      onClosing?.();
+    }, 30000);
+
+    return () => clearTimeout(timerId);
+  }, [isOpen, onClosing]);
+
   if (!isOpen) return null;
 
   return (

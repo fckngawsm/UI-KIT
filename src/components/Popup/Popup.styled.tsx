@@ -43,8 +43,8 @@ export const PopupContent = styled.div<{ size?: SIZE }>`
 
 export const PopupButton = styled(XCircle)`
   position: absolute;
-  top: -30px;
-  right: -30px;
+  top: -25px;
+  right: -25px;
   display: block;
   cursor: pointer;
 `;
