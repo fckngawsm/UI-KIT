@@ -17,6 +17,6 @@ export const darkenColor = (hexColor: string, percent: number) => {
 
   // Конвертируем значения каналов обратно в шестнадцатеричный формат
   const darkenedHexColor = `#${darkenedR.toString(16)}${darkenedG.toString(16)}${darkenedB.toString(16)}`;
-  console.log(darkenedHexColor, "darkenedHexColor");
+
   return darkenedHexColor;
 };
